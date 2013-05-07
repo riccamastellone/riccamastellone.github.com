@@ -28,6 +28,7 @@ function documentMouseUpHandler(a){mouseIsDown=false}function documentMouseDownH
 function documentMouseMoveHandler(a){mouseX=a.clientX-(window.innerWidth-SCREEN_WIDTH)*.5;mouseY=a.clientY-(window.innerHeight-SCREEN_HEIGHT)*.5}
 
 // Let's have some color variations!
+/*
 function colorLuminance(hex, lum) {  
     hex = String(hex).replace(/[^0-9a-f]/gi, '');  
     if (hex.length < 6) {  
@@ -42,11 +43,12 @@ function colorLuminance(hex, lum) {
     }  
     return rgb;  
 }  
+*/
 
 
 function createParticles(){particles=[];
 
-// Italian flan: 3 colors
+// Italian flag: 3 colors
 blocchi = (QUANTITY/3);
 
 // Green White Red!
@@ -60,8 +62,8 @@ for(var p=0;p<3;p++) {
 		size:1,
 		angle:0,
 		speed:.01+Math.random()*.04,targetSize:1,
-		fillColor:(colorLuminance(tricolore[p], Math.random())).toString(16),
-		// fillColor:"#"+(Math.random()*4210752+11184810|0).toString(16),
+		//fillColor:(colorLuminance(tricolore[p], Math.random())).toString(16),
+                fillColor:"#"+(Math.random()*4210752+11184810|0).toString(16),
 		orbit:RADIUS*.5+RADIUS*.5*Math.random()};
 		particles.push(b);
 		}
