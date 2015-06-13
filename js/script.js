@@ -19,7 +19,7 @@ $(document).ready(function () {
     
      if ($.cookie('hintshown') == undefined) {
         setTimeout("showHint()",2000);
-        $.cookie('hintshown', 'true');
+        $.cookie('hintshown', 'true', { expires: 2 });
      }
 })
 
